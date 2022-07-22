@@ -12,9 +12,16 @@ app.use(cors())
 app.use("/user", userRoute)
 app.use("/profile",userRouterers)
 
+app.get("/", function(req, res){
+    return res.send("hello welcome")
+})
+
 const port = process.env.port || 8080
 
+
+
+
 app.listen(port,async ()=>{
-    await connections
+    await connections()
    console.log("server started")
 })
