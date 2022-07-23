@@ -20,6 +20,7 @@ const port = process.env.port || 8080
 
 
 app.listen(port,async ()=>{
-    await connections()
+  
    console.log("server started")
+   await connections()
 })
